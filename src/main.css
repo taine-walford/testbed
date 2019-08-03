@@ -1,0 +1,43 @@
+.diamond {
+  transform: rotate(45deg);
+  background-color: transparent;
+  height: 120px;
+  width: 120px;
+  margin: 5px;
+  border: 2px solid transparent;
+  animation: dim 1.8s steps(2, start) infinite;
+  animation-timing-function: ease-in-out;
+}
+.top {
+  position: absolute;
+  top: -90px;
+}
+.right {
+  animation-delay: 0.45s;
+  position: absolute;
+  left: 90px;
+}
+.bottom {
+  animation-delay: 0.9s;
+  position: absolute;
+  top: 90px;
+}
+.left {
+  animation-delay: 1.35s;
+  position: absolute;
+  left: -90px;
+}
+
+@keyframes dim {
+  15% {
+    border-color: #0AF;
+    background-color: rgba(0, 170, 255, 0.7);
+  }
+  50% {
+    background-color: rgba(0, 170, 255, 0.2);
+  }
+  75% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
